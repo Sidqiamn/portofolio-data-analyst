@@ -5,9 +5,9 @@ const projects = [
   {
     id: 1,
     title: "HiTeman",
-    description: "Aplikasi untuk menghilangkan emosi negatif",
+    description: "Analisis Data E-commerce",
     image: "/projects/project12.png",
-    tags: ["Hugging Face", "Distilbert", "NLP"],
+    tags: ["SQL", "Power BI", "EDA"],
     githubUrl: "https://github.com/Sidqiamn",
   },
 ];
