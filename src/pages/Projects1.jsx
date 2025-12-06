@@ -6,6 +6,9 @@ import data5 from "../../public/projects/data5.png";
 import data6 from "../../public/projects/data6.png";
 import data7 from "../../public/projects/data7.png";
 import data8 from "../../public/projects/data8.png";
+import visual1 from "../../public/projects/visual1.png";
+import visual2 from "../../public/projects/visual2.png";
+import visual3 from "../../public/projects/visual3.png";
 import dataset from "../../public/projects/dataset.png";
 import Projek1_comp from "../components/comp_projek/Projek1_comp";
 
@@ -59,10 +62,15 @@ const Projects1 = () => {
             Berdasarkan hasil analisis, mayoritas pelanggan berasal dari
             negara-negara berikut:
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-10">
             <img
               src={data3}
               alt="Pengelompokan produk berdasarkan kategori dan subkategori"
+              className="rounded-lg shadow-lg max-w-[300px] w-full"
+            />
+            <img
+              src={visual1}
+              alt=""
               className="rounded-lg shadow-lg max-w-[300px] w-full"
             />
           </div>
@@ -104,7 +112,12 @@ const Projects1 = () => {
             <img
               src={data4}
               alt="Pengelompokan produk berdasarkan kategori dan subkategori"
-              className="rounded-lg shadow-lg max-w-[250px] w-full"
+              className="rounded-lg shadow-lg max-w-[400px] w-full"
+            />
+            <img
+              src={visual2}
+              alt="Pengelompokan produk berdasarkan kategori dan subkategori"
+              className="rounded-lg shadow-lg max-w-[300px] w-full"
             />
           </div>
           <p className="text-gray-700 leading-relaxed">
@@ -195,6 +208,11 @@ const Projects1 = () => {
             src={data7} // contoh: path/variable untuk gambar avg price per kategori
             alt="Rata-rata harga per kategori"
             className="rounded-lg shadow-lg max-w-[200px] w-full"
+          />
+          <img
+            src={visual3}
+            alt="Pengelompokan produk berdasarkan kategori dan subkategori"
+            className="rounded-lg shadow-lg max-w-[300px] w-full"
           />
         </div>
 
