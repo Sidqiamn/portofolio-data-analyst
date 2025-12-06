@@ -9,6 +9,7 @@ import data8 from "../../public/projects/data8.png";
 import visual1 from "../../public/projects/visual1.png";
 import visual2 from "../../public/projects/visual2.png";
 import visual3 from "../../public/projects/visual3.png";
+import dashboard1 from "../../public/projects/dashboard1.png";
 import dataset from "../../public/projects/dataset.png";
 import Projek1_comp from "../components/comp_projek/Projek1_comp";
 
@@ -16,6 +17,7 @@ const Projects1 = () => {
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-10 text-left space-y-8">
       {/* SECTION 1: PENGENALAN DATA */}
+
       <section className="space-y-5">
         <h2 className="text-3xl font-bold">
           📊 Analisis Data Penjualan & Pelanggan
@@ -46,6 +48,50 @@ const Projects1 = () => {
           />
         </div>
       </section>
+      <p className="text-gray-700 leading-relaxed">
+        Berikut adalah tampilan utama dashboard Power BI yang telah dibuat
+        berdasarkan proses <em>data cleaning</em>, <em>transformasi</em>, dan
+        <em>exploratory data analysis (EDA)</em>. Dashboard ini dirancang untuk
+        memberikan gambaran komprehensif terkait performa penjualan, profil
+        pelanggan, serta dinamika kategori produk.
+      </p>
+
+      <div className="flex justify-center py-4">
+        <img
+          src={dashboard1}
+          alt="Dashboard Power BI"
+          className="rounded-lg shadow-lg w-full md:w-3/4"
+        />
+      </div>
+
+      <p className="text-gray-700 leading-relaxed">
+        Visualisasi ini terdiri dari beberapa komponen utama:
+      </p>
+
+      <ul className="list-disc ml-6 mt-2 text-gray-700 leading-relaxed">
+        <li>
+          <strong>Ringkasan KPI (Key Performance Indicator)</strong>
+          Menampilkan total penjualan, jumlah pelanggan, jumlah pesanan, total
+          kuantitas, dan
+          <em> average price</em>.
+        </li>
+        <li>
+          <strong>Distribusi Geografis Pelanggan</strong> Menggambarkan negara
+          dengan kontribusi pelanggan terbesar.
+        </li>
+        <li>
+          <strong>Segmentasi Usia Pelanggan</strong> Menunjukkan persebaran
+          pelanggan berdasarkan kelompok umur.
+        </li>
+        <li>
+          <strong>Tren Penjualan</strong> Memvisualisasikan perkembangan
+          penjualan dari tahun ke tahun.
+        </li>
+        <li>
+          <strong>Analisis Produk</strong> Menampilkan kategori dengan penjualan
+          tertinggi serta produk terbaik berdasarkan total pendapatan.
+        </li>
+      </ul>
 
       <hr className="border-gray-300" />
 
@@ -343,35 +389,47 @@ const Projects1 = () => {
         <h4 className="text-lg font-bold">
           5. Top 5 Produk Berdasarkan Total Pendapatan
         </h4>
+
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <img
-            src={data8} // contoh: path/variable untuk gambar penjualan per kategori
-            alt="Total penjualan per kategori"
+            src={data8}
+            alt="Top 5 produk berdasarkan total pendapatan"
             className="rounded-lg shadow-lg max-w-[400px] w-full"
           />
         </div>
+
         <p>
-          Semua produk dalam daftar berasal dari kategori{" "}
-          <strong>Accessories</strong>, menunjukkan bahwa kategori ini menjadi
-          salah satu kontributor utama pendapatan.
+          Semua produk dalam daftar berasal dari kategori <strong>Bikes</strong>
+          , khususnya varian <strong>Mountain-200</strong>. Seri ini mendominasi
+          pendapatan dan volume penjualan pada dataset.
+          <strong> Mountain-200 Black - 46</strong> adalah produk teratas dengan
+          jumlah penjualan <strong>620 unit</strong> dan total pendapatan
+          sekitar
+          <strong> 1.373.454</strong>. Ini menjadi kontributor terbesar dalam
+          daftar.
+          <strong> Mountain-200 Black - 42</strong> mengikuti di posisi kedua
+          dengan
+          <strong> 614 unit</strong> terjual dan pendapatan sekitar
+          <strong> 1.363.128</strong> selisih penjualan relatif kecil
+          dibandingkan peringkat pertama.
         </p>
 
         <p>
-          <strong>Sport-100 Helmet - Red</strong> memberikan pendapatan
-          tertinggi (<strong>28.990</strong>) karena harga jualnya lebih tinggi,
-          meskipun jumlah terjualnya tidak terbesar.
+          Varian <strong>Silver</strong> juga tinggi
+          <strong> Mountain-200 Silver - 38 </strong>
+          dan <strong>Mountain-200 Silver - 46</strong> menempati peringkat
+          ketiga dan keempat dengan penjualan masing-masing{" "}
+          <strong> 596</strong> dan
+          <strong> 580 unit</strong>, menghasilkan pendapatan signifikan meski
+          cost sedikit lebih tinggi.
         </p>
 
         <p>
-          Produk dengan penjualan terbesar adalah{" "}
-          <strong>Water Bottle - 30 oz.</strong> (4.244 unit), namun karena
-          harga lebih rendah, pendapatannya masih di bawah helm.
-        </p>
-
-        <p className="font-semibold">
-          Kesimpulan: Produk berharga tinggi memberikan dampak besar pada
-          pendapatan, sementara produk murah bergantung pada volume penjualan
-          yang besar.
+          <strong>Mountain-200 Black - 38</strong> berada di posisi kelima
+          dengan
+          <strong>582 unit</strong> terjual dan total pendapatan sekitar
+          <strong> 1.294.854</strong>. Secara keseluruhan, variasi warna Black
+          cenderung unggul dibanding Silver dalam data ini.
         </p>
       </div>
       <Projek1_comp />

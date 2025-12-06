@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
-    title: "HiTeman",
-    description: "Analisis Data E-commerce",
-    image: "/projects/project12.png",
+    title: "Dashboard Analisis Data E-commerce",
+    description: "",
+    image: "/projects/dashboard1.png",
     tags: ["SQL", "Power BI", "EDA"],
     githubUrl: "https://github.com/Sidqiamn",
   },
