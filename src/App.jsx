@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 
 import { Toaster } from "@/components/ui/toaster";
 import Projects1 from "./pages/Projects1";
+import BikeSalesPortfolio from "./pages/BikeSalesPortfolio";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/project1" element={<Projects1 />} />
+        <Route path="/BikeSalesPortfolio" element={<BikeSalesPortfolio />} />
       </Routes>
     </>
   );

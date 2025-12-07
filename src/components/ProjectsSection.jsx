@@ -10,6 +10,14 @@ const projects = [
     tags: ["SQL", "Power BI", "EDA"],
     githubUrl: "https://github.com/Sidqiamn",
   },
+  {
+    id: 2,
+    title: "Bike Sales",
+    description: "",
+    image: "/projects/dashboard2.png",
+    tags: ["Excell", "Pivot", "Dashboard"],
+    githubUrl: "https://github.com/Sidqiamn",
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -73,7 +81,7 @@ export const ProjectsSection = () => {
                       </Link>
                     ) : project.id === 2 ? (
                       <Link
-                        to={`/hiTeman`} // misal route khusus untuk id 1
+                        to={`/BikeSalesPortfolio`} // misal route khusus untuk id 1
                         className="text-foreground/80 hover:text-primary transition-colors duration-300"
                       >
                         <ExternalLink size={20} />
