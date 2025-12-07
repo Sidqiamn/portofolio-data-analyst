@@ -37,7 +37,7 @@ export const MorePortfolios = () => {
           </a>
 
           {/* Web Dev Card */}
-          <a
+          {/* <a
             href="https://your-web-dev-portfolio-url.com" // Ganti dengan URL kamu
             target="_blank"
             className="group bg-card rounded-xl p-8 shadow-lg border border-primary/20 hover:border-primary transition-all duration-300 cursor-pointer"
@@ -52,7 +52,7 @@ export const MorePortfolios = () => {
               Membangun website modern menggunakan teknologi terbaru seperti
               Next.js, React, Firebase, dan Tailwind CSS.
             </p>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
