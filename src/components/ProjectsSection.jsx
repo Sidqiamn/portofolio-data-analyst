@@ -18,6 +18,14 @@ const projects = [
     tags: ["Excell", "Pivot", "Dashboard"],
     githubUrl: "https://github.com/Sidqiamn",
   },
+  {
+    id: 3,
+    title: "E-commerce (Streamlit)",
+    description: "",
+    image: "/projects/dashboard2.png",
+    tags: ["Streamlit", "Python"],
+    githubUrl: "https://github.com/Sidqiamn",
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -86,9 +94,9 @@ export const ProjectsSection = () => {
                       >
                         <ExternalLink size={20} />
                       </Link>
-                    ) : project.id === 6 ? (
+                    ) : project.id === 3 ? (
                       <Link
-                        to={`/chatbotrag`} // misal route khusus untuk id 1
+                        to={`/EcommerceAnalytics`} // misal route khusus untuk id 1
                         className="text-foreground/80 hover:text-primary transition-colors duration-300"
                       >
                         <ExternalLink size={20} />

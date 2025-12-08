@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import Projects1 from "./pages/Projects1";
 import BikeSalesPortfolio from "./pages/BikeSalesPortfolio";
 
+import EcommerceAnalytics from "./pages/EcommercePy";
+
 function App() {
   return (
     <>
@@ -13,6 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/project1" element={<Projects1 />} />
         <Route path="/BikeSalesPortfolio" element={<BikeSalesPortfolio />} />
+        <Route path="/EcommerceAnalytics" element={<EcommerceAnalytics />} />
       </Routes>
     </>
   );

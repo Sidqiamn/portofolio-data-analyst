@@ -18,15 +18,13 @@ const BikeSalesPortfolio = () => {
         </p>
       </header>
 
-      {/* Section: Dashboard */}
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start mb-8">
-        <div className="col-span-2">
-          <h2 className="text-2xl font-semibold">
-            📁 Cuplikan Data & Dashboard
-          </h2>
+      {/* Section: Dashboard (COLUMN layout) */}
+      <section className="flex flex-col gap-8 mb-8">
+        <div>
+          <h2 className="text-2xl font-semibold">📁 Cuplikan Dashboard</h2>
           <p className="text-gray-700">
-            Contoh sampel data yang digunakan dan tampilan dashboard hasil
-            proses data cleaning, transformasi, dan EDA.
+            Tampilan dashboard hasil proses data cleaning, transformasi, dan
+            EDA.
           </p>
 
           <div className="mt-4 rounded-lg overflow-hidden shadow">
@@ -39,11 +37,7 @@ const BikeSalesPortfolio = () => {
         </div>
 
         <div>
-          <h3 className="text-lg font-medium">Data Sample</h3>
-          <p className="text-gray-600 text-sm">
-            Kolom utama: Marital Status, Gender, Income, Commute Distance,
-            Region, Age.
-          </p>
+          <h3 className="text-2xl font-medium">📄 Data Sample</h3>
 
           <div className="mt-3 rounded-md overflow-hidden shadow-sm">
             <img

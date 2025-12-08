@@ -1,0 +1,229 @@
+import topCategory from "../../public/projects/topCategory.png";
+import topReviewProduct from "../../public/projects/rfmAnalysis.png";
+import reviewDistribution from "../../public/projects/reviewDistribution.png";
+import topCities from "../../public/projects/topCities.png";
+import rfmAnalysis from "../../public/projects/rfmAnalysis.png";
+import orderheatmap from "../../public/projects/orderheatmap.png";
+
+const EcommerceAnalytics = () => {
+  return (
+    <div className="w-full max-w-6xl mx-auto px-6 py-12 prose prose-slate">
+      {/* Header */}
+      <header className="text-center mb-12">
+        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          E-Commerce Analytics Dashboard
+        </h1>
+        <p className="mt-3 text-gray-600">
+          Rangkuman visualisasi analisis data penjualan, review pelanggan,
+          distribusi rating, segmentasi geografis, dan analisis RFM pelanggan.
+        </p>
+      </header>
+
+      {/* Dashboard Visual Highlights */}
+      <section className="flex flex-col gap-10 mb-12">
+        {/* Top Product Category */}
+        <div>
+          <h2 className="text-2xl font-semibold">
+            📦 Kategori Produk Terlaris
+          </h2>
+          <p className="text-gray-700">
+            Visualisasi ini menunjukkan 10 kategori produk dengan jumlah
+            penjualan tertinggi. Kategori <strong>bed_bath_table</strong>{" "}
+            menjadi pemimpin penjualan, diikuti oleh{" "}
+            <strong>health_beauty</strong> dan <strong>sports_leisure</strong>.
+          </p>
+          <div className="mt-4 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={topCategory}
+              alt="Top Product Categories"
+              className="w-full max-w-xl mx-auto"
+            />
+          </div>
+        </div>
+
+        {/* Most Reviewed Products */}
+        <div>
+          <h2 className="text-2xl font-semibold">
+            ⭐ Produk dengan Review Terbanyak
+          </h2>
+          <p className="text-gray-700">
+            Grafik horizontal ini menampilkan produk dengan total review
+            terbanyak. Produk dengan ID{" "}
+            <strong>aca2eb7d00ea1a7b8ebd4e68314663af</strong> menjadi yang
+            paling sering direview dengan lebih dari 450 review.
+          </p>
+          <div className="mt-4 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={topReviewProduct}
+              alt="Most Reviewed Product"
+              className="w-full max-w-xl mx-auto"
+            />
+          </div>
+        </div>
+
+        {/* Review Score Distribution */}
+        <div>
+          <h2 className="text-2xl font-semibold">
+            📊 Distribusi Skor Review untuk 3 Produk Teratas
+          </h2>
+          <p className="text-gray-700">
+            Distribusi skor menunjukkan bahwa ketiga produk teratas memiliki
+            proporsi besar di skor <strong>4</strong> dan <strong>5</strong>,
+            menandakan kepuasan pelanggan yang tinggi.
+          </p>
+          <div className="mt-4 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={reviewDistribution}
+              alt="Review Score Distribution"
+              className="w-full max-w-xl mx-auto"
+            />
+          </div>
+        </div>
+
+        {/* Top Cities */}
+        <div>
+          <h2 className="text-2xl font-semibold">
+            🌍 Kota dengan Pesanan Terbanyak
+          </h2>
+          <p className="text-gray-700">
+            <strong>Sao Paulo</strong> mendominasi jumlah pesanan secara
+            signifikan, jauh di atas kota besar lainnya seperti Rio de Janeiro
+            dan Belo Horizonte.
+          </p>
+          <div className="mt-4 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={topCities}
+              alt="Top Cities Orders"
+              className="w-full max-w-xl mx-auto"
+            />
+          </div>
+        </div>
+
+        {/* RFM Analysis */}
+        <div>
+          <h2 className="text-2xl font-semibold">
+            👥 Analisis RFM — Pelanggan Terbaik
+          </h2>
+          <p className="text-gray-700">
+            Analisis RFM digunakan untuk mengidentifikasi pelanggan terbaik
+            berdasarkan <strong>Recency</strong>, <strong>Frequency</strong>,
+            dan <strong>Monetary Value</strong>. Tabel menunjukkan 5 pelanggan
+            dengan nilai recency terbaik (paling recent melakukan pembelian).
+          </p>
+          <div className="mt-4 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={rfmAnalysis}
+              alt="RFM Analysis"
+              className="w-full max-w-xl mx-auto"
+            />
+          </div>
+        </div>
+        {/* Geographical Heatmap */}
+        <div>
+          <h2 className="text-2xl font-semibold">
+            🗺️ Peta Sebaran Pesanan (Geographical Heatmap)
+          </h2>
+          <p className="text-gray-700">
+            Visualisasi heatmap ini menunjukkan konsentrasi pesanan berdasarkan
+            lokasi pelanggan. Warna merah–kuning menandakan kepadatan pesanan
+            yang tinggi, yang paling dominan terlihat di wilayah tenggara Brasil
+            seperti <strong>Sao Paulo</strong>, <strong>Rio de Janeiro</strong>,
+            dan <strong>Belo Horizonte</strong>. Sementara area hijau–biru
+            menunjukkan wilayah dengan volume pesanan yang lebih rendah.
+          </p>
+          <div className="mt-4 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={orderheatmap}
+              alt="Geographical Heatmap of Orders"
+              className="w-full max-w-xl mx-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      <hr className="my-10" />
+
+      {/* Key Insights */}
+      <section className="space-y-6 mb-12">
+        <h2 className="text-2xl font-semibold">🔎 Key Insights</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Insight 1 */}
+          <article className="bg-white p-5 rounded-xl shadow-sm">
+            <h4 className="font-bold">Kategori Produk Terlaris</h4>
+            <p className="text-sm text-gray-600">
+              Kategori <strong>bed_bath_table</strong> secara konsisten menjadi
+              penyumbang penjualan terbesar. Fokus penambahan stok dan promo
+              pada kategori ini berpotensi meningkatkan pendapatan.
+            </p>
+          </article>
+
+          <article className="bg-white p-5 rounded-xl shadow-sm">
+            <h4 className="font-bold">Skor Review Pelanggan Sangat Positif</h4>
+            <p className="text-sm text-gray-600">
+              Skor review menunjukkan dominasi rating 4–5, menandakan kualitas
+              produk yang baik dan pengalaman pelanggan yang positif.
+            </p>
+          </article>
+
+          <article className="bg-white p-5 rounded-xl shadow-sm">
+            <h4 className="font-bold">Distribusi Pesanan Secara Geografis</h4>
+            <p className="text-sm text-gray-600">
+              Konsentrasi pesanan sangat tinggi di kota besar, terutama
+              <strong>Sao Paulo</strong>, yang menggambarkan pasar potensial
+              paling besar untuk ekspansi logistik.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Detailed Interpretation */}
+      <section className="space-y-6 mb-16">
+        <h2 className="text-2xl font-semibold">📌 Interpretasi Mendalam</h2>
+
+        <div className="bg-white p-6 rounded-xl shadow-sm space-y-5">
+          <div>
+            <h3 className="font-semibold">1. Pola Penjualan Produk</h3>
+            <p className="text-gray-700">
+              Produk kebutuhan rumah tangga mendominasi penjualan, yang
+              menunjukkan permintaan tinggi pada kategori esensial. Kategori
+              dengan angka rendah bisa dievaluasi untuk perbaikan kualitas atau
+              strategi pemasaran baru.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">2. Analisis Review Pelanggan</h3>
+            <p className="text-gray-700">
+              Tingginya jumlah review pada beberapa produk menandakan engagement
+              yang baik. Distribusi rating yang positif juga memperkuat
+              kredibilitas produk di marketplace.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">3. Preferensi Wilayah</h3>
+            <p className="text-gray-700">
+              Mayoritas transaksi berada di kota besar. Hal ini membuka peluang
+              optimasi biaya logistik, penargetan digital marketing, dan
+              strategi retensi berbasis wilayah.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">4. RFM Customer Segmentation</h3>
+            <p className="text-gray-700">
+              Pelanggan paling recent cenderung memiliki monetary value tinggi.
+              Ini menunjukkan peluang besar untuk program loyalitas serta
+              kampanye retensi yang lebih personal.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="text-center text-sm text-gray-600"></footer>
+    </div>
+  );
+};
+
+export default EcommerceAnalytics;
