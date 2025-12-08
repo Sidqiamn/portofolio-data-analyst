@@ -1,5 +1,5 @@
 import topCategory from "../../public/projects/topCategory.png";
-import topReviewProduct from "../../public/projects/rfmAnalysis.png";
+import topReviewProduct from "../../public/projects/topReviewProduct.png";
 import reviewDistribution from "../../public/projects/reviewDistribution.png";
 import topCities from "../../public/projects/topCities.png";
 import rfmAnalysis from "../../public/projects/rfmAnalysis.png";
@@ -9,7 +9,7 @@ const EcommerceAnalytics = () => {
   return (
     <div className="w-full max-w-6xl mx-auto px-6 py-12 prose prose-slate">
       {/* Header */}
-      <header className="text-center mb-12">
+      <header className="text-center mb-7">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
           E-Commerce Analytics Dashboard
         </h1>
@@ -17,7 +17,44 @@ const EcommerceAnalytics = () => {
           Rangkuman visualisasi analisis data penjualan, review pelanggan,
           distribusi rating, segmentasi geografis, dan analisis RFM pelanggan.
         </p>
+        <p className="text-gray-700">
+          Berikut adalah link pengerjaan di Google Colab:
+        </p>
+
+        <a
+          href="https://colab.research.google.com/drive/1OofjmrM21a8pex5OUOdIvIII8gNly_AC?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-lg bg-blue-700 text-white font-medium 
+             hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+        >
+          📓 Buka Notebook
+        </a>
       </header>
+      {/* Streamlit Explanation */}
+      <div className="bg-blue-50 border-l-4 text-left border-blue-500 p-5 rounded-lg shadow-sm mb-10">
+        <h2 className="text-xl font-semibold text-blue-700">
+          🧭 Tentang Dashboard Interaktif Ini
+        </h2>
+        <p className="mt-2 text-gray-700 leading-relaxed">
+          Visualisasi yang ditampilkan pada halaman ini berasal dari dashboard
+          interaktif yang dibangun menggunakan <strong>Streamlit</strong>. Pada
+          aplikasi Streamlit tersebut, pengguna dapat melakukan{" "}
+          <strong>filter data </strong> melalui panel navigasi di sisi kiri
+          mulai dari memilih jenis visualisasi, rentang tanggal, kategori
+          produk, hingga memilih state tertentu. Selain itu, pengguna juga dapat
+          filter berdasarkan rentang waktu tertentu.
+        </p>
+        <p className="mt-2 text-gray-700 leading-relaxed">
+          Seluruh grafik yang Anda lihat di bawah merupakan hasil eksplorasi
+          data yang telah difilter sesuai preferensi pengguna, sehingga setiap
+          visualisasi mampu memberikan{" "}
+          <strong>
+            insight yang lebih relevan, fleksibel, dan dapat disesuaikan{" "}
+          </strong>
+          dengan kebutuhan analisis bisnis.
+        </p>
+      </div>
 
       {/* Dashboard Visual Highlights */}
       <section className="flex flex-col gap-10 mb-12">
@@ -29,14 +66,14 @@ const EcommerceAnalytics = () => {
           <p className="text-gray-700">
             Visualisasi ini menunjukkan 10 kategori produk dengan jumlah
             penjualan tertinggi. Kategori <strong>bed_bath_table</strong>{" "}
-            menjadi pemimpin penjualan, diikuti oleh{" "}
+            menjadi penjualan teratas, diikuti oleh{" "}
             <strong>health_beauty</strong> dan <strong>sports_leisure</strong>.
           </p>
           <div className="mt-4 rounded-xl overflow-hidden shadow-lg">
             <img
               src={topCategory}
               alt="Top Product Categories"
-              className="w-full max-w-xl mx-auto"
+              className="h-[300px] max-w-2xl mx-auto"
             />
           </div>
         </div>
@@ -56,7 +93,7 @@ const EcommerceAnalytics = () => {
             <img
               src={topReviewProduct}
               alt="Most Reviewed Product"
-              className="w-full max-w-xl mx-auto"
+              className="h-[300px] max-w-2xl mx-auto"
             />
           </div>
         </div>
@@ -179,44 +216,81 @@ const EcommerceAnalytics = () => {
 
       {/* Detailed Interpretation */}
       <section className="space-y-6 mb-16">
-        <h2 className="text-2xl font-semibold">📌 Interpretasi Mendalam</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 border-b border-gray-200 pb-3">
+          📌 Interpretasi Mendalam
+        </h2>
 
-        <div className="bg-white p-6 rounded-xl shadow-sm space-y-5">
-          <div>
-            <h3 className="font-semibold">1. Pola Penjualan Produk</h3>
-            <p className="text-gray-700">
-              Produk kebutuhan rumah tangga mendominasi penjualan, yang
-              menunjukkan permintaan tinggi pada kategori esensial. Kategori
-              dengan angka rendah bisa dievaluasi untuk perbaikan kualitas atau
-              strategi pemasaran baru.
-            </p>
+        <div className="bg-white p-8 rounded-2xl shadow-md space-y-8">
+          {/* Item 1 */}
+          <div className="flex items-start  text-left gap-4">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+              1
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-gray-800">
+                Pola Penjualan Produk
+              </h3>
+              <p className="mt-1 text-left text-gray-600 leading-relaxed">
+                Produk kebutuhan rumah tangga mendominasi penjualan, yang
+                menunjukkan permintaan tinggi pada kategori esensial. Kategori
+                dengan performa rendah dapat dievaluasi untuk perbaikan kualitas
+                maupun strategi pemasaran baru.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h3 className="font-semibold">2. Analisis Review Pelanggan</h3>
-            <p className="text-gray-700">
-              Tingginya jumlah review pada beberapa produk menandakan engagement
-              yang baik. Distribusi rating yang positif juga memperkuat
-              kredibilitas produk di marketplace.
-            </p>
+          {/* Item 2 */}
+          <div className="flex items-start text-left gap-4">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+              2
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-gray-800">
+                Analisis Review Pelanggan
+              </h3>
+              <p className="mt-1 text-left text-gray-600 leading-relaxed">
+                Tingginya jumlah review pada beberapa produk menunjukkan
+                keterlibatan pelanggan yang kuat. Distribusi rating yang
+                didominasi nilai positif turut meningkatkan kredibilitas dan
+                kepercayaan terhadap produk.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h3 className="font-semibold">3. Preferensi Wilayah</h3>
-            <p className="text-gray-700">
-              Mayoritas transaksi berada di kota besar. Hal ini membuka peluang
-              optimasi biaya logistik, penargetan digital marketing, dan
-              strategi retensi berbasis wilayah.
-            </p>
+          {/* Item 3 */}
+          <div className="flex items-start text-left gap-4">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+              3
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-gray-800">
+                Preferensi Wilayah
+              </h3>
+              <p className="mt-1 text-left text-gray-600 leading-relaxed">
+                Mayoritas transaksi terkonsentrasi di kota-kota besar. Pola ini
+                membuka peluang untuk optimasi biaya logistik, penguatan
+                strategi pemasaran digital, serta perencanaan distribusi yang
+                lebih efisien.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h3 className="font-semibold">4. RFM Customer Segmentation</h3>
-            <p className="text-gray-700">
-              Pelanggan paling recent cenderung memiliki monetary value tinggi.
-              Ini menunjukkan peluang besar untuk program loyalitas serta
-              kampanye retensi yang lebih personal.
-            </p>
+          {/* Item 4 */}
+          <div className="flex items-start  text-left gap-4">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">
+              4
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-gray-800">
+                RFM Customer Segmentation
+              </h3>
+              <p className="mt-1 text-left text-gray-600 leading-relaxed">
+                Pelanggan dengan nilai recency terbaik cenderung memiliki
+                monetary value yang tinggi. Hal ini menunjukkan potensi besar
+                untuk program loyalitas dan kampanye retensi yang lebih
+                personal.
+              </p>
+            </div>
           </div>
         </div>
       </section>

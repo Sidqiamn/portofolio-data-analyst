@@ -22,7 +22,7 @@ const projects = [
     id: 3,
     title: "E-commerce (Streamlit)",
     description: "",
-    image: "/projects/dashboard2.png",
+    image: "/projects/orderheatmap.png",
     tags: ["Streamlit", "Python"],
     githubUrl: "https://github.com/Sidqiamn",
   },
