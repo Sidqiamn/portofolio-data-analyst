@@ -1,147 +1,166 @@
 import dashboard2 from "../../public/projects/dashboard2.png";
 import tableSample from "../../public/projects/tableSample.png";
 import incomeChart from "../../public/projects/incomeChart.png";
-import ageChart from "../../public/projects/ageChart.png"; // NOTE: hapus spasi di path
+import ageChart from "../../public/projects/ageChart.png";
 import commuteChart from "../../public/projects/commuteChart.png";
 
 const BikeSalesPortfolio = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-12 prose prose-slate">
-      {/* Header */}
-      <header className="text-center mb-8">
-        <h1 className="text-4xl sm:text-5xl font-extrabold">
-          Bike Sales Dashboard — Insights
+    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-14 font-sans">
+      {/* HEADER */}
+      <header className="text-center mb-14">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-black  bg-clip-text ">
+          Bike Sales Dashboard
         </h1>
-        <p className="mt-3 text-gray-600">
-          Interpretasi visual dashboard penjualan sepeda — ringkasan insight dan
-          rekomendasi yang rapi untuk portofolio.
+        <p className="mt-4 text-gray-500 text-lg">
+          Insight & visualisasi performa penjualan sepeda
         </p>
       </header>
 
-      {/* Section: Dashboard (COLUMN layout) */}
-      <section className="flex flex-col gap-8 mb-8">
-        <div>
-          <h2 className="text-2xl font-semibold">📁 Cuplikan Dashboard</h2>
-          <p className="text-gray-700">
-            Tampilan dashboard hasil proses data cleaning, transformasi, dan
-            EDA.
-          </p>
+      {/* DASHBOARD PREVIEW */}
+      <section className="flex flex-col gap-14 mb-16">
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold flex items-center gap-2">
+            📊 Cuplikan Dashboard
+          </h2>
 
-          <div className="mt-4 rounded-lg overflow-hidden shadow">
+          <div className="group relative rounded-2xl overflow-hidden shadow-xl flex justify-center items-center">
             <img
               src={dashboard2}
               alt="Bike Sales Dashboard"
-              className="w-full object-cover"
+              className="h-[400px] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-105 mx-auto"
             />
+            <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition" />
           </div>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-medium">📄 Data Sample</h3>
+        <div className="space-y-4">
+          <h3 className="text-2xl font-semibold flex items-center gap-2">
+            📋 Data Sample
+          </h3>
 
-          <div className="mt-3 rounded-md overflow-hidden shadow-sm">
+          <div className="group rounded-xl overflow-hidden shadow-lg">
             <img
               src={tableSample}
               alt="Contoh data tabel"
-              className="w-full object-cover"
+              className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         </div>
       </section>
 
-      <hr className="my-6" />
-
-      {/* Key Findings */}
-      <section className="space-y-6 mb-10">
-        <h2 className="text-2xl font-semibold">
-          🔎 Key Findings — Ringkasan Insight
+      {/* KEY FINDINGS */}
+      {/* KEY FINDINGS */}
+      <section className="mb-20">
+        <h2 className="text-2xl font-semibold mb-8 flex items-center gap-2">
+          🔍 Key Findings
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <article className="p-4 bg-white rounded shadow-sm">
-            <h4 className="font-bold">Income vs Purchase</h4>
-            <p className="text-sm text-gray-600">
-              Pembeli sepeda cenderung berasal dari pendapatan menengah ke atas.
-              Pria menunjukkan rata-rata pendapatan tertinggi.
-            </p>
-            <img
-              src={incomeChart}
-              alt="Income vs Purchase"
-              className="mt-3 w-full rounded"
-            />
-          </article>
+        {/* 2 Card di atas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {[
+            {
+              title: "Income vs Purchase",
+              desc: "Pembeli didominasi segmen pendapatan menengah ke atas.",
+              img: incomeChart,
+            },
+            {
+              title: "Age Brackets",
+              desc: "Kelompok usia Middle Age menjadi pembeli terbanyak.",
+              img: ageChart,
+            },
+          ].map((item, i) => (
+            <article
+              key={i}
+              className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-1"
+            >
+              <h4 className="font-bold text-lg">{item.title}</h4>
+              <p className="mt-2 text-sm text-gray-500">{item.desc}</p>
+              <img
+                src={item.img}
+                alt={item.title}
+                className="mt-4 w-full rounded-xl object-contain"
+              />
+            </article>
+          ))}
+        </div>
 
-          <article className="p-4 bg-white rounded shadow-sm">
-            <h4 className="font-bold">Age Brackets</h4>
-            <p className="text-sm text-gray-600">
-              Kelompok <strong>Middle Age</strong> mendominasi pembelian.
-            </p>
-            <img
-              src={ageChart}
-              alt="Age Brackets Chart"
-              className="mt-3 w-full rounded"
-            />
-          </article>
+        {/* Gambar ke-3 full width di bawah */}
+        <article className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition duration-300">
+          <h4 className="font-bold text-lg">Commute Distance</h4>
+          <p className="mt-2 text-sm text-gray-500">
+            Jarak 0–2 miles memiliki tingkat konversi tertinggi.
+          </p>
 
-          <article className="p-4 bg-white rounded shadow-sm">
-            <h4 className="font-bold">Commute Distance</h4>
-            <p className="text-sm text-gray-600">
-              Jarak 0–2 miles memiliki korelasi terkuat dengan pembelian sepeda.
-            </p>
+          <div className="mt-6 flex justify-center">
             <img
               src={commuteChart}
-              alt="Commute Distance Chart"
-              className="mt-3 w-full rounded"
+              alt="Commute Distance"
+              className="w-full max-w-5xl rounded-xl object-contain"
             />
-          </article>
+          </div>
+        </article>
+      </section>
+
+      {/* INTERPRETATION */}
+      <section className="mb-20 space-y-6">
+        <h2 className="text-2xl font-semibold flex items-center gap-2">
+          📌 Interpretasi Detail
+        </h2>
+
+        <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl space-y-6">
+          {[
+            {
+              title: "Segmentasi Pendapatan",
+              text: "Segmen pendapatan menengah–tinggi memiliki potensi tertinggi dalam keputusan pembelian.",
+            },
+            {
+              title: "Preferensi Usia",
+              text: "Usia produktif (Middle Age) menjadi pasar paling stabil.",
+            },
+            {
+              title: "Jarak",
+              text: "Semakin pendek jarak, semakin besar peluang pembelian sepeda.",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="p-4 rounded-xl hover:bg-white transition shadow-sm hover:shadow-md"
+            >
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-gray-600 mt-1">{item.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Interpretasi */}
-      <section className="space-y-6 mb-10">
-        <h2 className="text-2xl font-semibold">📌 Interpretasi Detail</h2>
+      {/* RECOMMENDATION */}
+      <section className="mb-24">
+        <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+          ✅ Rekomendasi Strategis
+        </h2>
 
-        <div className="bg-white p-6 rounded shadow-sm space-y-4">
-          <div>
-            <h3 className="font-semibold">1. Segmentasi Pendapatan</h3>
-            <p className="text-gray-700">
-              Konsumen dengan pendapatan menengah–tinggi menjadi segmen paling
-              potensial untuk penjualan sepeda.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-semibold">2. Preferensi Usia</h3>
-            <p className="text-gray-700">
-              Kelompok usia Middle Age merupakan target pasar utama berdasarkan
-              pola pembelian.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-semibold">3. Jarak Komuter</h3>
-            <p className="text-gray-700">
-              Semakin pendek jarak tempuh, semakin tinggi kemungkinan pembelian
-              sepeda.
-            </p>
-          </div>
+        <div className="bg-white p-8 rounded-2xl shadow-lg">
+          <ul className="space-y-4 text-gray-700">
+            {[
+              "Fokus kampanye pada usia produktif (35–55 tahun).",
+              "Optimalkan produk untuk komuter jarak dekat.",
+              "Perkuat distribusi di wilayah dengan performa tertinggi.",
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-3 hover:translate-x-1 transition"
+              >
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      {/* Rekomendasi */}
-      <section className="space-y-4 mb-12">
-        <h2 className="text-2xl font-semibold">✅ Rekomendasi Strategis</h2>
-        <ul className="list-disc ml-6 text-gray-700">
-          <li>Fokus kampanye pada segmen usia produktif (35–55 tahun).</li>
-          <li>Optimalkan paket produk untuk komuter jarak dekat.</li>
-          <li>Perkuat distribusi pada wilayah dengan performa terbaik.</li>
-        </ul>
-      </section>
-
-      {/* Footer */}
-      <footer className="text-center text-sm text-gray-600">
-        <p>Komponen ini dirancang khusus untuk portofolio data analytics.</p>
-      </footer>
+      {/* FOOTER */}
+      <footer className="text-center text-sm text-gray-500"></footer>
     </div>
   );
 };
