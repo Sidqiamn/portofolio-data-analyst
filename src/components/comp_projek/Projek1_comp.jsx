@@ -177,7 +177,7 @@ const Projek1_comp = () => {
             <strong>101 produk</strong>, menunjukkan bahwa segmen harga menengah
             memiliki variasi yang hampir sama kuatnya. Sementara itu, jumlah
             produk pada kategori <strong>500–1000</strong> dan{" "}
-            <strong>Above 1000</strong>
+            <strong>Above 1000 </strong>
             jauh lebih sedikit, menandakan penawaran terbatas pada segmen
             menengah-atas dan premium.
           </p>

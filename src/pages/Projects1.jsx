@@ -51,7 +51,7 @@ const Projects1 = () => {
       <p className="text-gray-700 leading-relaxed">
         Berikut adalah tampilan utama dashboard Power BI yang telah dibuat
         berdasarkan proses <em>data cleaning</em>, <em>transformasi</em>, dan
-        <em>exploratory data analysis (EDA)</em>. Dashboard ini dirancang untuk
+        <em> exploratory data analysis (EDA)</em>. Dashboard ini dirancang untuk
         memberikan gambaran komprehensif terkait performa penjualan, profil
         pelanggan, serta dinamika kategori produk.
       </p>
@@ -70,7 +70,7 @@ const Projects1 = () => {
 
       <ul className="list-disc ml-6 mt-2 text-gray-700 leading-relaxed">
         <li>
-          <strong>Ringkasan KPI (Key Performance Indicator)</strong>
+          <strong>Ringkasan KPI (Key Performance Indicator) </strong>
           Menampilkan total penjualan, jumlah pelanggan, jumlah pesanan, total
           kuantitas, dan
           <em> average price</em>.
@@ -212,16 +212,15 @@ const Projects1 = () => {
             Total Sales tercatat sebesar <strong>$29.356.250</strong>.
             Pendapatan ini menunjukkan bahwa bisnis beroperasi pada skala besar
             serta berhasil menciptakan nilai finansial yang signifikan. Total
-            Nr. Customers mencapai <strong>18.484</strong> pelanggan,
+            Customers mencapai <strong>18.484</strong> pelanggan,
             mengindikasikan jangkauan pasar yang luas.
           </p>
 
           <p>
             Total Orders ada di angka <strong>27.659</strong>. Jika dibandingkan
             dengan jumlah pelanggan, rata-rata pesanan per pelanggan adalah
-            sekitar <strong>1.5</strong>, menunjukkan adanya repeat order yang
-            sehat. Total Quantity yang terjual mencapai <strong>60.423</strong>{" "}
-            unit.
+            sekitar <strong>1.5</strong>, menunjukkan adanya pesanan berulang .
+            Total Quantity yang terjual mencapai <strong>60.423</strong> unit.
           </p>
 
           <p>
@@ -284,7 +283,7 @@ const Projects1 = () => {
           </p>
           <p className="mt-2 text-gray-700">
             <em>Insight:</em> Accessories memiliki harga paling murah namun
-            volume penjualan sangat tinggi — menunjukkan sensitivitas kuat
+            volume penjualan sangat tinggi menunjukkan sensitivitas kuat
             terhadap harga rendah dan pasar massal.
           </p>
           <ul className="mt-2 ml-4 list-disc text-gray-700">
@@ -307,9 +306,9 @@ const Projects1 = () => {
             <strong>Avg Price:</strong> 949
           </p>
           <p className="mt-2 text-gray-700">
-            <em>Insight:</em> Meskipun harga jauh lebih tinggi, Bikes tetap laku
-            banyak — menandakan permintaan kuat dan daya beli yang tidak terlalu
-            melihat harga pada segmen ini.
+            <em>Insight:</em> Meskipun harga jauh lebih tinggi, sepeda tetap
+            laku banyak menandakan permintaan kuat dan daya beli yang tidak
+            terlalu melihat harga pada segmen ini.
           </p>
           <ul className="mt-2 ml-4 list-disc text-gray-700">
             <li>Berikan promo/discount terbatas (misal 5%–10%).</li>
@@ -331,7 +330,7 @@ const Projects1 = () => {
           </p>
           <p className="mt-2 text-gray-700">
             <em>Insight:</em> Harga relatif terjangkau namun penjualan lebih
-            rendah daripada accessories — indikasi masalah pada product-market
+            rendah daripada accessories indikasi masalah pada product-market
             fit, variasi produk, atau pemasaran.
           </p>
           <ul className="mt-2 ml-4 list-disc text-gray-700">
@@ -352,7 +351,7 @@ const Projects1 = () => {
           </p>
           <p className="mt-2 text-gray-700">
             <em>Insight:</em> Komponen berharga sedang, tetapi minim informasi
-            penjualan — bisa berarti stok terbatas, kurang promosi, atau
+            penjualan bisa berarti stok terbatas, kurang promosi, atau
             permintaan rendah.
           </p>
           <ul className="mt-2 ml-4 list-disc text-gray-700">
@@ -362,25 +361,6 @@ const Projects1 = () => {
               layak dipertahankan
             </li>
           </ul>
-        </div>
-
-        {/* Final Recommendations */}
-        <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
-          <h5 className="font-semibold">Rekomendasi Strategis Singkat</h5>
-          <ol className="mt-2 ml-4 list-decimal text-gray-700">
-            <li>
-              Accessories: murah → penjualan tinggi → naikkan harga sedikit
-              untuk tingkatkan profit.
-            </li>
-            <li>
-              Bikes: mahal tetapi tetap banyak dibeli → turunkan harga sedikit
-              untuk mendorong lonjakan penjualan.
-            </li>
-            <li>
-              Clothing: murah tapi penjualan rendah → perlu peningkatan promosi
-              dan variasi produk.
-            </li>
-          </ol>
         </div>
       </div>
       {/* INSIGHT 5 (Ringkas) */}
